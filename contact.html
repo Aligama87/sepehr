@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - اتوپارت پرو</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-car text-danger me-2"></i>اتوپارت پرو
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">درباره ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">تماس با ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold text-white mb-3">تماس با ما</h1>
+                    <p class="lead text-white-50">با متخصصان خودرویی ما در ارتباط باشید</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <div class="contact-form-wrapper">
+                        <h2 class="fw-bold mb-4">پیام خود را برای ما ارسال کنید</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">نام *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">نام خانوادگی *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">آدرس ایمیل *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">شماره تلفن</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">موضوع *</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">موضوع را انتخاب کنید</option>
+                                        <option value="parts-inquiry">استعلام قطعات</option>
+                                        <option value="service-appointment">نوبت سرویس</option>
+                                        <option value="technical-support">پشتیبانی فنی</option>
+                                        <option value="warranty-claim">ادعای گارانتی</option>
+                                        <option value="general-inquiry">استعلام عمومی</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="vehicle" class="form-label">اطلاعات خودرو</label>
+                                    <input type="text" class="form-control" id="vehicle" placeholder="سال، برند، مدل (مثال: ۱۴۰۰ پژو ۲۰۶)">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">پیام *</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="لطفاً استعلام یا نیازهای سرویس خود را شرح دهید..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            عضویت در خبرنامه برای دریافت به‌روزرسانی‌ها و پیشنهادات ویژه
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-danger btn-lg">ارسال پیام</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h3 class="fw-bold mb-4">در تماس باشید</h3>
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt text-danger"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="fw-bold">آدرس</h5>
+                                <p class="text-muted">تهران، خیابان اتومبیل<br>منطقه خودرویی<br>پلاک ۱۲۳</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone text-danger"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="fw-bold">تلفن</h5>
+                                <p class="text-muted">۰۲۱-۱۲۳۴۵۶۷۸<br>شنبه-پنج‌شنبه: ۸ صبح-۶ عصر<br>جمعه: ۸ صبح-۴ عصر</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope text-danger"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="fw-bold">ایمیل</h5>
+                                <p class="text-muted">info@autopartspro.ir<br>support@autopartspro.ir</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock text-danger"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5 class="fw-bold">ساعات کاری</h5>
+                                <p class="text-muted">
+                                    شنبه - پنج‌شنبه: ۸:۰۰ صبح - ۶:۰۰ عصر<br>
+                                    جمعه: ۸:۰۰ صبح - ۴:۰۰ عصر<br>
+                                    تعطیل: تعطیل
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold mb-3">مکان ما را پیدا کنید</h2>
+                    <p class="text-muted">از نمایشگاه و مرکز سرویس ما دیدن کنید</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-placeholder">
+                        <div class="map-content text-center">
+                            <i class="fas fa-map-marked-alt fa-5x text-danger mb-3"></i>
+                            <h4 class="fw-bold">نقشه تعاملی</h4>
+                            <p class="text-muted">تهران، خیابان اتومبیل، منطقه خودرویی، پلاک ۱۲۳</p>
+                            <a href="#" class="btn btn-danger">مسیریابی</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold mb-3">سوالات متداول</h2>
+                    <p class="text-muted">سوالات رایج درباره خدمات ما</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    آیا برای قطعات و خدمات گارانتی ارائه می‌دهید؟
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    بله، ما گارانتی جامعی برای تمام قطعات و خدمات ارائه می‌دهیم. قطعات با گارانتی تولیدکننده عرضه می‌شوند و خدمات نصب ما شامل گارانتی ۱۲ ماهه کار است.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    نصب معمولاً چقدر طول می‌کشد؟
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    زمان نصب بسته به پیچیدگی قطعه متفاوت است. نصب‌های ساده مانند فیلتر یا لامپ ۳۰-۶۰ دقیقه طول می‌کشد، در حالی که سیستم‌های پیچیده مانند تعلیق یا قطعات موتور ممکن است ۲-۴ ساعت زمان ببرد.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    آیا روی تمام برندها و مدل‌های خودرو کار می‌کنید؟
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    ما روی اکثر خودروهای داخلی و خارجی کار می‌کنیم. تکنسین‌های ما با تمام برندهای اصلی از جمله پژو، سمند، پراید، تویوتا، هوندا، بی‌ام‌و، بنز و بسیاری دیگر تجربه دارند.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    آیا می‌توانم قطعات خودم را برای نصب بیاورم؟
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    بله، ما می‌توانیم قطعات تأمین شده توسط مشتری را نصب کنیم. با این حال، لطفاً توجه داشته باشید که ما نمی‌توانیم قطعاتی را که خودمان تأمین نکرده‌ایم گارانتی کنیم، اگرچه گارانتی کار ما همچنان برای نصب اعمال می‌شود.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-car text-danger me-2"></i>اتوپارت پرو
+                    </h5>
+                    <p class="text-muted">شریک مطمئن شما برای قطعات خودرویی پریمیم و خدمات حرفه‌ای. کیفیت تضمین شده.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">لینک‌های سریع</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-muted">خانه</a></li>
+                        <li><a href="about.html" class="text-muted">درباره ما</a></li>
+                        <li><a href="services.html" class="text-muted">خدمات</a></li>
+                        <li><a href="contact.html" class="text-muted">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">دسته‌بندی‌ها</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted">قطعات موتور</a></li>
+                        <li><a href="#" class="text-muted">سیستم ترمز</a></li>
+                        <li><a href="#" class="text-muted">سیستم تعلیق</a></li>
+                        <li><a href="#" class="text-muted">سیستم برق</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">اطلاعات تماس</h6>
+                    <ul class="list-unstyled">
+                        <li class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i>تهران، خیابان اتومبیل، پلاک ۱۲۳</li>
+                        <li class="text-muted mb-2"><i class="fas fa-phone me-2"></i>۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li class="text-muted"><i class="fas fa-envelope me-2"></i>info@autopartspro.ir</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; ۱۴۰۳ اتوپارت پرو. تمام حقوق محفوظ است.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">حریم خصوصی</a>
+                    <a href="#" class="text-muted">شرایط خدمات</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
