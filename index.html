@@ -11,61 +11,98 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="fas fa-car text-danger me-2"></i>اتوپارت پرو
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- بخش آیکون‌های سمت چپ (جستجو و سبد خرید در موبایل) -->
+        <div class="d-flex align-items-center order-lg-1">
+            <!-- آیکون جستجو (موبایل) -->
+            <a class="nav-link me-2 d-lg-none text-white" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+                <i class="fas fa-search"></i>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">خانه</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            محصولات
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#engine-parts" onclick="showCategoryProducts('engine-parts')">قطعات موتور</a></li>
-                            <li><a class="dropdown-item" href="#brake-system" onclick="showCategoryProducts('brake-system')">سیستم ترمز</a></li>
-                            <li><a class="dropdown-item" href="#suspension" onclick="showCategoryProducts('suspension')">سیستم تعلیق</a></li>
-                            <li><a class="dropdown-item" href="#electrical" onclick="showCategoryProducts('electrical')">سیستم برق</a></li>
-                            <li><a class="dropdown-item" href="#oils" onclick="showCategoryProducts('oils')">روغن و مایعات</a></li>
-                            <li><a class="dropdown-item" href="#tools" onclick="showCategoryProducts('tools')">ابزارآلات</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">درباره ما</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">خدمات</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">تماس با ما</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
-                            <i class="fas fa-search"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link position-relative" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
-                                0
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            
+            <!-- آیکون سبد خرید (موبایل) -->
+            <a class="nav-link position-relative me-2 d-lg-none text-white" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
+                    0
+                </span>
+            </a>
         </div>
-    </nav>
 
+        <!-- لوگو در وسط -->
+        <a class="navbar-brand fw-bold mx-auto order-lg-2" href="index.html">
+            <i class="fas fa-car text-danger me-2"></i>اتوپارت پرو
+        </a>
+
+        <!-- دکمه همبرگر در سمت راست -->
+        <div class="order-lg-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="width: 1rem; height: 1rem;"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-lg-4" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <!-- منوی اصلی -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">خانه</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        محصولات
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#engine-parts" onclick="showCategoryProducts('engine-parts')">قطعات موتور</a></li>
+                        <li><a class="dropdown-item" href="#brake-system" onclick="showCategoryProducts('brake-system')">سیستم ترمز</a></li>
+                        <li><a class="dropdown-item" href="#suspension" onclick="showCategoryProducts('suspension')">سیستم تعلیق</a></li>
+                        <li><a class="dropdown-item" href="#electrical" onclick="showCategoryProducts('electrical')">سیستم برق</a></li>
+                        <li><a class="dropdown-item" href="#oils" onclick="showCategoryProducts('oils')">روغن و مایعات</a></li>
+                        <li><a class="dropdown-item" href="#tools" onclick="showCategoryProducts('tools')">ابزارآلات</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">خدمات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">تماس با ما</a>
+                </li>
+                
+                <!-- سبد خرید در منوی همبرگر (موبایل) -->
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link position-relative" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
+                            0
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- آیکون‌های سمت چپ در دسکتاپ -->
+            <ul class="navbar-nav order-lg-1">
+                <!-- آیکون جستجو (دسکتاپ) -->
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+                
+                <!-- سبد خرید (دسکتاپ) -->
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link position-relative" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
+                            0
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
     <main>
         <!-- Hero Slider (کوچک‌تر شده) -->
         <section class="hero-slider-compact">

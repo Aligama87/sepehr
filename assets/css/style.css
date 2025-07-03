@@ -37,6 +37,7 @@ body {
   color: var(--primary-color) !important;
 }
 
+
 /* تصحیح منوی کشویی RTL */
 .dropdown-menu {
   border: none;
