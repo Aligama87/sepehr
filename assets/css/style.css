@@ -1,4 +1,3 @@
-/* فونت و استایل‌های سفارشی برای اتوپارت پرو */
 
 :root {
   --primary-color: #dc3545;
@@ -8,6 +7,8 @@
   --success-color: #198754;
   --info-color: #0dcaf0;
   --warning-color: #ffc107;
+   --primary-color: #1E90FF;
+  --secondary-color: #FF8C00;
 }
 
 * {
@@ -17,7 +18,7 @@
 }
 
 body {
-  font-family: "Vazirmatn", sans-serif;
+    font-family: "IRANSans", sans-serif;
   line-height: 1.6;
   color: #333;
   padding-top: 76px;

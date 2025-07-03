@@ -1,5 +1,6 @@
 // جاوا اسکریپت اتوپارت پرو
 
+
 document.addEventListener("DOMContentLoaded", () => {
   // راه‌اندازی تمام عملکردها
   initNavigation()
