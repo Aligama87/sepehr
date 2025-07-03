@@ -378,51 +378,71 @@ function addToCart(productId, productName, productPrice) {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart))
-  updateCartUI()
+  updateCartUI();
   showNotification(`${productName} به سبد خرید اضافه شد!`, "success")
 }
 
 function removeFromCart(productId) {
-  cart = cart.filter((item) => item.id !== productId)
-  localStorage.setItem("cart", JSON.stringify(cart))
-  updateCartUI()
+  cart = cart.filter(item => item.id !== productId);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartUI(); // این خط را اضافه کنید
 }
 
 function updateQuantity(productId, newQuantity) {
-  const item = cart.find((item) => item.id === productId)
+  const item = cart.find(item => item.id === productId);
   if (item) {
     if (newQuantity <= 0) {
-      removeFromCart(productId)
+      removeFromCart(productId);
     } else {
-      item.quantity = newQuantity
-      localStorage.setItem("cart", JSON.stringify(cart))
-      updateCartUI()
+      item.quantity = newQuantity;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartUI(); // این خط را اضافه کنید
     }
   }
 }
+document.addEventListener("DOMContentLoaded", () => {
+  // سایر توابع اولیه...
+  updateCartUI(); // این خط را اضافه کنید
+});
+function ensureCartCountElement() {
+  const cartIcons = document.querySelectorAll('.cart-icon');
+  cartIcons.forEach(icon => {
+    if (!icon.querySelector('.cart-count')) {
+      const countElement = document.createElement('span');
+      countElement.className = 'cart-count';
+      countElement.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+      icon.appendChild(countElement);
+    }
+  });
+}
 
 function updateCartUI() {
-  const cartCount = document.querySelector(".cart-count")
-  const cartItems = document.getElementById("cartItems")
-  const cartSummary = document.getElementById("cartSummary")
-  const cartTotal = document.getElementById("cartTotal")
+  // پیدا کردن تمام عناصر شمارشگر در صفحه
+  const cartCountElements = document.querySelectorAll('.cart-count');
+  const cartItems = document.getElementById('cartItems');
+  const cartSummary = document.getElementById('cartSummary');
+  const cartTotal = document.getElementById('cartTotal');
 
-  // بروزرسانی تعداد آیتم‌ها
-  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0)
-  if (cartCount) {
-    cartCount.textContent = totalItems
-  }
+  // محاسبه تعداد کل آیتم‌ها
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-  if (!cartItems) return
+  // به‌روزرسانی تمام شمارشگرها
+  cartCountElements.forEach(element => {
+    element.textContent = totalItems;
+    element.style.display = totalItems > 0 ? 'inline-block' : 'none';
+  });
+
+  // بقیه کدهای سبد خرید...
+  if (!cartItems) return;
 
   if (cart.length === 0) {
     cartItems.innerHTML = `
-            <div class="text-center text-muted">
-                <i class="fas fa-shopping-cart fa-3x mb-3"></i>
-                <p>سبد خرید شما خالی است</p>
-            </div>
-        `
-    if (cartSummary) cartSummary.classList.add("d-none")
+      <div class="text-center text-muted">
+        <i class="fas fa-shopping-cart fa-3x mb-3"></i>
+        <p>سبد خرید شما خالی است</p>
+      </div>
+    `;
+    if (cartSummary) cartSummary.classList.add('d-none');
   } else {
     cartItems.innerHTML = cart
       .map(
